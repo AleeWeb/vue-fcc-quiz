@@ -8,7 +8,7 @@
     <b-container class="bv-example-row">
       <b-row>
         <b-col sm="6" offset="3">
-          <QuestionBox
+          <QuestionBox                                  
             v-if="questions.length"
             :currentQuestion="questions[index]"
             :next="next"
@@ -57,7 +57,7 @@ export default {
         return response.json()
       })
       .then((jsonData) => {
-        this.questions = jsonData.results
+        this.questions = jsonData.results   // The results array is where all 10 questions are
       })
   }
 }
